@@ -13,22 +13,21 @@ import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
 
-        button.setOnClickListener {
-            val usuario: String = editText.text.toString()
-            val senha: String = editText2.text.toString()
-            val mostrar: TextView = findViewById(R.id.textView2)
+    public fun buttonOnClickValidacao(view: View) {
+        val login = "${ editText.text.toString() }@${ editText2.text.toString() }"
+        var view: TextView = findViewById(R.id.textView2)
 
-            if (usuario == "admin" && senha == "admin") {
-                mostrar.setText("Login efetuado")
-            }
-            else {
-                mostrar.setText("Usuário ou Senha incorretos!")
-            }
+        when (login) {
+            "admin@admin" -> view.setText("Login efetuado")
+            "@admin" -> view.setText("Favor inserir o usuário")
+            "admin@" -> view.setText("Favor inserir a senha")
+            "@" -> view.setText("Campos em brancos, favor informar dados de acesso")
+            else -> view.setText("Usuário ou Senha incorretos!")
         }
     }
 }
