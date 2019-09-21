@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".Main2Activity">
 
     <TextView
             android:id="@+id/textView"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="numberDecimal"
             android:text=""
             app:layout_constraintEnd_toStartOf="@+id/textView"
             app:layout_constraintStart_toStartOf="@+id/textView"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="numberDecimal"
             android:text=""
             app:layout_constraintEnd_toStartOf="@+id/textView"
             app:layout_constraintStart_toStartOf="@+id/textView"
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:onClick="buttonSair"
+            android:onClick="finalizar"
             android:text="Sair"
             app:layout_constraintStart_toStartOf="@+id/editText2"
             app:layout_constraintTop_toBottomOf="@+id/editText2" />
@@ -65,8 +65,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:onClick="buttonOnClickValidacao"
-            android:text="Logar"
+            android:onClick="calculo"
+            android:text="Calcular"
             app:layout_constraintEnd_toEndOf="@+id/editText2"
             app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
@@ -85,7 +85,7 @@
             android:layout_width="47dp"
             android:layout_height="23dp"
             android:layout_marginTop="216dp"
-            android:text="Nome"
+            android:text="Altura"
             app:layout_constraintStart_toStartOf="@+id/editText"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Senha"
+            android:text="Peso"
             app:layout_constraintStart_toStartOf="@+id/editText2"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
 
