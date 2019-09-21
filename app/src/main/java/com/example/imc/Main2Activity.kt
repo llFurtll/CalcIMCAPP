@@ -25,6 +25,7 @@ class Main2Activity : AppCompatActivity() {
         var pesofinal: Double = peso.toDouble()
         var imagem: TextView = findViewById(R.id.textView2)
 
+
         var resultado: Double = pesofinal.div(alturafinal * 2)
 
         if (resultado < 18.5) {
