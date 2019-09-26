@@ -26,7 +26,7 @@ class Main2Activity : AppCompatActivity() {
         var imagem: TextView = findViewById(R.id.textView2)
 
 
-        var resultado: Double = pesofinal.div(alturafinal * alturafinal)
+        var resultado: Double = pesofinal.div(alturafinal * alturafinal )
 
         if (resultado < 18.5) {
             imagem.setText("Abaixo do peso, cuide da sua alimentação!")
