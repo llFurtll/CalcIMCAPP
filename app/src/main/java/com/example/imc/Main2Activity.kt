@@ -18,15 +18,22 @@ class Main2Activity : AppCompatActivity() {
     /*
     * Essa função faz o cálculo do IMC e retorna a mensagem para o usuário
     * */
-    public fun calculo(view: View) {
-        var altura: String = editText.text.toString()
-        var alturafinal: Double = altura.toDouble()
-        var peso: String = editText2.text.toString()
-        var pesofinal: Double = peso.toDouble()
+    public fun calculo(view: View): Boolean {
+        var altura = editText.text.toString()
+        var peso = editText2.text.toString()
         var imagem: TextView = findViewById(R.id.textView2)
 
+        if (
+            altura == "" ||
+            peso == "" ||
+            altura.toDouble() == 0.0 ||
+            peso.toDouble() == 0.0
+        ) {
+            imagem.text = "Há campos em branco ou número inválidos. Favor verificar e corrigir!"
+            return false
+        }
 
-        var resultado: Double = pesofinal.div(alturafinal * alturafinal )
+        var resultado: Double = peso.toDouble() / (altura.toDouble() * altura.toDouble())
 
         if (resultado < 18.5) {
             imagem.setText("Abaixo do peso, cuide da sua alimentação!")
@@ -46,6 +53,8 @@ class Main2Activity : AppCompatActivity() {
         else {
             imagem.setText("Obesidade grau 3, esta critico sua situação, esta correndo risco de vida!")
         }
+
+        return true
     }
 
     /*
